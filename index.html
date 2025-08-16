@@ -64,6 +64,18 @@
   <p id="formDuration" style="float: right;"></p>
   <div style="clear: both;"></div>
 
+   <div class="form-buttons">
+  <button type="button" onclick="closeForm()">Fechar</button>
+  <button type="submit">Confirmar Agendamento</button>
+</div>
+
+<!-- Novo bloco -->
+<div class="form-buttons">
+  <button type="button" onclick="cancelarAgendamento()">Cancelar Agendamento</button>
+  <button type="button" onclick="remarcarAgendamento()">Remarcar</button>
+</div>
+
+
   <form id="bookingForm">
     <label for="nome">Nome</label>
     <input type="text" id="nome" placeholder="Seu nome completo" required />
