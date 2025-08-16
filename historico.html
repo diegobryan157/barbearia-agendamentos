@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Histórico de Agendamentos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Histórico de Agendamentos</h1>
+    <a href="index.html" class="voltar-btn">⬅ Voltar</a>
+  </header>
+
+  <main>
+    <div id="historicoContainer" class="historico-lista">
+    </div>
+  </main>
+
+  <script>
+    const container = document.getElementById("historicoContainer");
+    const historico = JSON.parse(localStorage.getItem("historico")) || [];
+
+    if (historico.length === 0) {
+      container.innerHTML = "<p>Nenhum agendamento encontrado.</p>";
+    } else {
+      historico.forEach((item, index) => {
+        const div = document.createElement("div");
+        div.className = "historico-item";
+        div.innerHTML =
+          "<h3>" + item.servico + "</h3>" +
+          "<p><strong>Cliente:</strong> " + item.nome + "</p>" +
+          "<p><strong>Telefone:</strong> " + item.telefone + "</p>" +
+          "<p><strong>Data:</strong> " + item.data + " às " + item.horario + "</p>" +
+          "<p><strong>Status:</strong> ✅ " + item.status + "</p>";
+        container.appendChild(div);
+      });
+    }
+  </script>
+</body>
+</html>

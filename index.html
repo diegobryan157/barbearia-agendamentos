@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Barbearia Agendamentos</title>
+  <link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+<body>
+  <header>
+    <h1>Barbearia Agendamentos</h1>
+    <a href="historico.html" id="historyBtn">Histórico</a>
+
+  </header>
+
+  <main>
+    <h2>Nossos Serviços</h2>
+    <p>Escolha um serviço para agendar</p>
+    <div class="services">
+      <div class="service-card">
+        <h3>Corte de Cabelo</h3>
+        <p>R$ 35,00</p>
+        <p>30min</p>
+        <button onclick="openForm('Corte de Cabelo', 35, '30min')">Agendar</button>
+      </div>
+      <div class="service-card">
+        <h3>Barba</h3>
+        <p>R$ 25,00</p>
+        <p>20min</p>
+        <button onclick="openForm('Barba', 25, '20min')">Agendar</button>
+      </div>
+      <div class="service-card">
+        <h3>Corte + Barba</h3>
+        <p>R$ 55,00</p>
+        <p>45min</p>
+        <button onclick="openForm('Corte + Barba', 55, '45min')">Agendar</button>
+      </div>
+      <div class="service-card">
+        <h3>Pigmentação</h3>
+        <p>R$ 40,00</p>
+        <p>30min</p>
+        <button onclick="openForm('Pigmentação', 40, '30min')">Agendar</button>
+      </div>
+      <div class="service-card">
+        <h3>Hidratação</h3>
+        <p>R$ 45,00</p>
+        <p>40min</p>
+        <button onclick="openForm('Hidratação', 45, '40min')">Agendar</button>
+      </div>
+      <div class="service-card">
+        <h3>Sobrancelha</h3>
+        <p>R$ 15,00</p>
+        <p>15min</p>
+        <button onclick="openForm('Sobrancelha', 15, '15min')">Agendar</button>
+      </div>
+    </div>
+  </main>
+
+ <div class="form-modal hidden" id="formModal">
+  <h2 id="formTitle">Agendar Serviço</h2>
+  <p id="formPrice" style="float: left;"></p>
+  <p id="formDuration" style="float: right;"></p>
+  <div style="clear: both;"></div>
+
+  <form id="bookingForm">
+    <label for="nome">Nome</label>
+    <input type="text" id="nome" placeholder="Seu nome completo" required />
+
+    <label for="telefone">Telefone</label>
+    <input type="tel" id="telefone" placeholder="(00) 00000-0000" required />
+
+    <label for="data">Data</label>
+    <input type="text" id="data" placeholder="Selecione uma data" required />
+
+
+    <label for="horario">Horário</label>
+    <select id="horario" required>
+      <option value="">Selecione um horário</option>
+      <option>08:30</option>
+      <option>09:30</option>
+      <option>10:30</option>
+      <option>14:00</option>
+      <option>15:30</option>
+    </select>
+
+    <div class="form-buttons">
+      <button type="button" onclick="closeForm()">Cancelar</button>
+      <button type="submit">Confirmar Agendamento</button>
+    </div>
+  </form>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
