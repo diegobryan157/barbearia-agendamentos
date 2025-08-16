@@ -71,16 +71,6 @@ document.getElementById("bookingForm").addEventListener("submit", function(e) {
   closeForm();
 });
 
-// Função para cancelar o agendamento
-function cancelarAgendamento() {
-  alert("❌ Agendamento cancelado!");
-  document.getElementById("bookingForm").reset();
-  closeForm();
-}
 
-// Função para remarcar o agendamento
-function remarcarAgendamento() {
-  document.getElementById("bookingForm").reset();
-  alert("🔄 Preencha novamente para remarcar.");
 }
 
