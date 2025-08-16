@@ -47,7 +47,7 @@ document.getElementById("bookingForm").addEventListener("submit", function(e) {
   const horario = document.getElementById("horario").value;
 
   if (!nome || !telefone || !data || !horario) {
-    alert("Por favor, preencha todos os campos.");
+    alert("Por favor, preencha todos os campos."); 
     return;
   }
 
