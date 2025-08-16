@@ -192,28 +192,4 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   opacity: 1;
 }
 
-.historico-buttons {
-  margin-top: 1rem;
-  display: flex;
-  gap: 0.5rem;
-}
-
-.historico-buttons button {
-  flex: 1;
-  padding: 0.5rem;
-  border-radius: 6px;
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
-}
-
-.historico-buttons button:first-child {
-  background: #ef4444; /* vermelho para cancelar */
-  color: white;
-}
-
-.historico-buttons button:last-child {
-  background: #2563eb; /* azul para remarcar */
-  color: white;
-}
 
