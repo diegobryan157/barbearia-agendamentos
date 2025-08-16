@@ -95,20 +95,20 @@ document.getElementById("bookingForm").addEventListener("submit", function(e) {
         "</div>";
       container.appendChild(div);
     });
-  }
+ }
 
-  // Função cancelar
-  function cancelarAgendamento(index) {
-    historico[index].status = "❌ Cancelado";
-    localStorage.setItem("historico", JSON.stringify(historico));
-    alert("❌ Agendamento cancelado!");
-    location.reload(); // Atualiza a página para mostrar o novo status
-  }
+    // Cancelar agendamento
+    function cancelarAgendamento(index) {
+      historico[index].status = "❌ Cancelado";
+      localStorage.setItem("historico", JSON.stringify(historico));
+      alert("❌ Agendamento cancelado!");
+      location.reload(); // recarrega para atualizar a tela
+    }
 
-  // Função remarcar
-  function remarcarAgendamento() {
-    alert("🔄 Redirecionando para remarcar...");
-    window.location.href = "index.html"; // Vai pro início
-  }
+    // Remarcar agendamento
+    function remarcarAgendamento() {
+      alert("🔄 Redirecionando para remarcar...");
+      window.location.href = "index.html"; // volta para agendar de novo
+    }
 </script>
 
