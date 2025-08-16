@@ -28,21 +28,14 @@
         const div = document.createElement("div");
         div.className = "historico-item";
         div.innerHTML =
-         div.innerHTML =
-  "<h3>" + item.servico + "</h3>" +
-  "<p><strong>Cliente:</strong> " + item.nome + "</p>" +
-  "<p><strong>Telefone:</strong> " + item.telefone + "</p>" +
-  "<p><strong>Data:</strong> " + item.data + " às " + item.horario + "</p>" +
-  "<p><strong>Status:</strong> ✅ " + item.status + "</p>" +
-  "<div class='historico-buttons'>" +
-    "<button onclick='cancelarAgendamento(" + index + ")'>Cancelar</button>" +
-    "<button onclick='remarcarAgendamento()'>Remarcar</button>" +
-  "</div>";
-
+          "<h3>" + item.servico + "</h3>" +
+          "<p><strong>Cliente:</strong> " + item.nome + "</p>" +
+          "<p><strong>Telefone:</strong> " + item.telefone + "</p>" +
+          "<p><strong>Data:</strong> " + item.data + " às " + item.horario + "</p>" +
+          "<p><strong>Status:</strong> ✅ " + item.status + "</p>";
         container.appendChild(div);
       });
     }
   </script>
 </body>
 </html>
-
